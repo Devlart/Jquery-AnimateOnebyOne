@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr-FR">
+<head>
+	<meta charset="UTF-8" />
+	<title>Demo AnimateOneByOne</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="lib/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="lib/Jquery-AnimateOneByOne-1.0.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			$('a.show').click(function(){
+				$('.element').animateOneByOne({
+			      css:{
+			        opacity: '1'
+			      },
+			      duration: 450,
+			      interval: 100,
+			      callback: function(){
+			        $('.show').fadeOut(400,function(){
+			        	$('.hide').fadeIn(400);
+			        });
+			       
+			      } 
+			    });			
+			    return false;	
+			});
+			
+			
+			$('a.hide').click(function(){
+				$('.element').animateOneByOne({
+			      css:{
+			        opacity: '0'
+			      },
+			      duration: 150,
+			      interval: 0,
+			      callback: function(){
+			        $('.hide').fadeOut(400,function(){
+			        	$('.show').fadeIn(400);
+			        });
+			        
+			      } 
+			    });			
+			    return false;	
+			});
+		
+		});
+	</script>
+</head>
+<body>
+	<h1>Demo AnimateOneByOne</h1>
+	
+	<a href="#" class="show">Show all elements</a>
+	<a href="#" class="hide">Hide all elements</a>
+	
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+	<div class="element"></div>
+</body>
+</html>

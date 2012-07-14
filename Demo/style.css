@@ -1,0 +1,4 @@
+h1{font-family: 'Comic Sans MS'; font-size: 27px; color:rgba(81,81,81,0.77); text-align: center; text-transform: uppercase}
+.element{width: 8%; margin: 1.5%; height: 100px; background: rgba(199,199,199,0.92); float:left; opacity: 0;}
+a{display: block; color: #575757; background: #FFF; border: 1px solid #908e8e; width: 200px; padding: 5px 0; text-align: center; margin: 10px auto;}
+a.hide{display: none}
